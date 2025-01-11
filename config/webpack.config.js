@@ -758,6 +758,7 @@ module.exports = function (webpackEnv) {
           baseConfig: {
             extends: [require.resolve("eslint-config-react-app/base")],
             rules: {
+              "no-unused-vars": "warn",
               ...(!hasJsxRuntime && {
                 "react/react-in-jsx-scope": "error",
               }),
