@@ -8,7 +8,7 @@ const BridgeCard = styled(Card)({
   background: "#16191f",
   borderRadius: "32px",
   padding: "32px",
-  width: "100%",
+  // width: "100%",
   maxWidth: "375px",
 });
 
@@ -64,71 +64,92 @@ export const BridgeWidget = () => {
   const cultUsdValue = 1.25;
 
   return (
-    <BridgeCard>
-      <Stack spacing={6}>
-        <Typography variant="h2" color="white" sx={{ mb: 4 }}>
-          Bridge
-        </Typography>
+    <Box
+      sx={{
+        pt: { md: 12, sm: 2, xs: 2 },
+        pb: { md: 16, sm: 8, xs: 8 },
+        maxWidth: "100vw",
+      }}
+    >
+      <BridgeCard
+        sx={{
+          mx: { md: 4, sm: 2, xs: 2 },
+        }}
+      >
+        <Stack spacing={6}>
+          <Typography variant="h2" color="white" sx={{ mb: 4 }}>
+            Bridge
+          </Typography>
 
-        <Stack spacing={5}>
-          <Box
-            sx={{
-              display: "flex",
-              flexDirection: "row",
-              justifyContent: "space-between",
-            }}
-          >
-            <Stack spacing={2}>
-              <Typography variant="body1" color="white" sx={{ mb: 2 }}>
-                From
-              </Typography>
-              <NetworkSelector
-                networkName={fromNetwork.name}
-                logoUrl={fromNetwork.logo}
-              />
-            </Stack>
+          <Stack spacing={5}>
+            <Box
+              sx={{
+                display: "flex",
+                flexDirection: { md: "row", sm: "column", xs: "column" },
+                alignItems: {
+                  md: "flex-start",
+                  sm: "center",
+                  xs: "center",
+                },
+                justifyContent: {
+                  md: "space-between",
+                  sm: "center",
+                  xs: "center",
+                },
+              }}
+            >
+              <Stack spacing={2}>
+                <Typography variant="body1" color="white" sx={{ mb: 2 }}>
+                  From
+                </Typography>
+                <NetworkSelector
+                  networkName={fromNetwork.name}
+                  logoUrl={fromNetwork.logo}
+                />
+              </Stack>
 
-            <Box sx={{ display: "flex", justifyContent: "center", my: 2 }}>
-              <SwapButton onClick={handleSwapNetworks}>⇄</SwapButton>
+              <Box sx={{ display: "flex", justifyContent: "center", my: 2 }}>
+                <SwapButton onClick={handleSwapNetworks}>⇄</SwapButton>
+              </Box>
+
+              <Stack spacing={2}>
+                <Typography variant="body1" color="white" sx={{ mb: 2 }}>
+                  To
+                </Typography>
+                <NetworkSelector
+                  networkName={toNetwork.name}
+                  logoUrl={toNetwork.logo}
+                />
+              </Stack>
             </Box>
 
             <Stack spacing={2}>
-              <Typography variant="body1" color="white" sx={{ mb: 2 }}>
-                To
-              </Typography>
-              <NetworkSelector
-                networkName={toNetwork.name}
-                logoUrl={toNetwork.logo}
-              />
+              <BalanceText>
+                {fromNetwork.name} balance: {0}
+              </BalanceText>
+
+              <Stack spacing={1}>
+                <TokenInput
+                  amount={amount}
+                  usdValue={(Number(amount) * cultUsdValue).toString()}
+                  network={fromNetwork.name}
+                  onChange={setAmount}
+                />
+
+                <Typography
+                  variant="body2"
+                  color="white"
+                  sx={{ mt: 2, textAlign: "center" }}
+                >
+                  Enter amount to bridge
+                </Typography>
+              </Stack>
             </Stack>
-          </Box>
 
-          <Stack spacing={2}>
-            <BalanceText>
-              {fromNetwork.name} balance: {0}
-            </BalanceText>
-
-            <Stack spacing={1}>
-              <TokenInput
-                amount={amount}
-                usdValue={(Number(amount) * cultUsdValue).toString()}
-                network={fromNetwork.name}
-                onChange={setAmount}
-              />
-
-              <Typography
-                variant="body2"
-                color="white"
-                sx={{ mt: 2, textAlign: "center" }}
-              >
-                Enter amount to bridge
-              </Typography>
-            </Stack>
+            <ArchButton text="BRIDGE" disabled onClick={console.log} />
           </Stack>
-
-          <ArchButton text="BRIDGE" disabled onClick={console.log} />
         </Stack>
-      </Stack>
-    </BridgeCard>
+      </BridgeCard>
+    </Box>
   );
 };

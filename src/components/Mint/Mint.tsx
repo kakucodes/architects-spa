@@ -75,14 +75,19 @@ export const Mint = () => {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        minHeight: "75vh",
+        pt: { md: 12, sm: 2, xs: 2 },
+        pb: { md: 16, sm: 8, xs: 8 },
         width: "100%",
       }}
     >
-      <StyledCard>
+      <StyledCard
+        sx={{
+          mx: { md: 4, sm: 2, xs: 2 },
+        }}
+      >
         <CardContent>
           <Grid2 container spacing={4}>
-            <Grid2 size={6}>
+            <Grid2 size={{ sm: 12, md: 6 }}>
               {/* Left side - NFT Preview */}
               <Stack sx={{ flex: 1 }} spacing={2}>
                 <img
@@ -134,9 +139,21 @@ export const Mint = () => {
             </Grid2>
 
             {/* Right side - Mint Controls */}
-            <Grid2 size={6} sx={{ px: 6, pt: 6, pb: 2 }}>
+            <Grid2
+              size={{ sm: 12, md: 6 }}
+              sx={{
+                px: { md: 6, sm: 0, xs: 0 },
+                pt: { md: 6, sm: 1, xs: 1 },
+                pb: { md: 2, sm: 0, xs: 0 },
+              }}
+            >
               <Box sx={{ flex: 1 }}>
-                <Box sx={{ display: "flex", justifyContent: "center" }}>
+                <Box
+                  sx={{
+                    display: { sm: "none", xs: "none", md: "flex" },
+                    justifyContent: "center",
+                  }}
+                >
                   <img
                     src={`${process.env.PUBLIC_URL}/architectslogo.png`}
                     alt="The Architects Logo"
@@ -147,7 +164,11 @@ export const Mint = () => {
                   />
                 </Box>
 
-                <Grid2 container spacing={2} rowSpacing={3}>
+                <Grid2
+                  container
+                  spacing={2}
+                  rowSpacing={{ md: 3, sm: 4, xs: 4 }}
+                >
                   <Grid2 size={6}>
                     <Stack spacing={1}>
                       <Typography color="white">Streamswap</Typography>
@@ -264,129 +285,6 @@ export const Mint = () => {
             </Grid2>
           </Grid2>
         </CardContent>
-        {/* <Grid2 size={6}>
-          <img
-            src={`${process.env.PUBLIC_URL}/architects-preview.gif`}
-            width={"100%"}
-            alt="Preview of Architects NFTs"
-            style={{ borderRadius: 20 }}
-          />
-        </Grid2>
-        <Grid2 container size={6}>
-          <Grid2 size={12}>
-            <img
-              src={`${process.env.PUBLIC_URL}/architectslogo.png`}
-              alt="Architects Logo"
-              height={108}
-              width={273}
-            />
-          </Grid2>
-          <Grid2 size={6}>
-            <Typography color="white">Minting Chain</Typography>
-            <Box
-              sx={{
-                alignItems: "center",
-                display: "flex",
-                flexDirection: "row",
-                gap: 3,
-              }}
-            >
-              <img
-                width={34}
-                height={34}
-                src={`${process.env.PUBLIC_URL}/osmosis-logo.png`}
-                style={{ borderRadius: "50%" }}
-              />
-              <Typography fontWeight="bold" color="white">
-                OSMOSIS
-              </Typography>
-            </Box>
-          </Grid2>
-          <Grid2 size={6}>
-            <Typography color="white">Marketplace</Typography>
-            <Box
-              sx={{
-                alignItems: "center",
-                display: "flex",
-                flexDirection: "row",
-                gap: 3,
-              }}
-            >
-              <img
-                width={34}
-                height={34}
-                src={`${process.env.PUBLIC_URL}/ambur-logo.jpg`}
-                style={{ borderRadius: "50%" }}
-              />
-              <Typography fontWeight="bold" color="white">
-                AMBUR
-              </Typography>
-            </Box>
-          </Grid2>
-
-          <Grid2 size={6}>
-            <Typography color="white">Sale Price</Typography>
-            <Box
-              sx={{
-                alignItems: "center",
-                display: "flex",
-                flexDirection: "row",
-                gap: 3,
-              }}
-            >
-              <img
-                width={34}
-                height={34}
-                src={`${process.env.PUBLIC_URL}/cultIcon.png`}
-                style={{ borderRadius: "50%" }}
-              />
-              <Typography fontWeight="bold" color="white">
-                150 $CULT
-              </Typography>
-            </Box>
-          </Grid2>
-          <Grid2 size={6}>
-            <Typography color="white"># to Mint (0/20)</Typography>
-            <Box
-              sx={{
-                alignItems: "center",
-                display: "flex",
-                flexDirection: "row",
-                gap: 3,
-              }}
-            >
-              <img
-                width={34}
-                height={34}
-                src={`${process.env.PUBLIC_URL}/ambur-logo.jpg`}
-                style={{ borderRadius: "50%" }}
-              />
-              <Typography fontWeight="bold" color="white">
-                AMBUR
-              </Typography>
-            </Box>
-          </Grid2>
-
-          <Grid2
-            size={12}
-            sx={{
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "center",
-              alignItems: "center",
-            }}
-          >
-            <Box>
-              <ArchButton
-                text={"Mint Architect"}
-                onClick={function (): void {
-                  throw new Error("Function not implemented.");
-                }}
-              />
-            </Box>
-            <Typography variant="caption">Get $CULT on Osmosis</Typography>
-          </Grid2>
-        </Grid2> */}
       </StyledCard>
     </Box>
   );

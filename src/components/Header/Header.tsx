@@ -80,6 +80,7 @@ export function Header({}: {}) {
 
   const menuItems = [
     { text: "MINT", to: "/mint", isExternal: false },
+    // { text: "$CULT BRIDGE", to: "/bridge", isExternal: false },
     {
       text: "RITES",
       href: "https://rites.architectsnft.io/",

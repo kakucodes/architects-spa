@@ -13,8 +13,8 @@ function RouteComponent() {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        minHeight: "75vh",
         width: "100%",
+        maxWidth: "100vw",
       }}
     >
       <BridgeWidget />
