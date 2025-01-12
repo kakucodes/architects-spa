@@ -23,8 +23,10 @@ import { Link } from "@tanstack/react-router";
 
 const NavLink = styled(Link)(({ theme }) => ({
   color: "#FFFFFF",
-  fontSize: "16px",
-  fontWeight: 500,
+  fontSize: "18px",
+  lineHeight: "16.2px",
+
+  fontWeight: 700,
   padding: "8px 16px",
   textDecoration: "none",
   "&:hover": {
@@ -34,8 +36,10 @@ const NavLink = styled(Link)(({ theme }) => ({
 
 const ExternalLink = styled(MuiLink)(({ theme }) => ({
   color: "#FFFFFF",
-  fontSize: "16px",
-  fontWeight: 500,
+  fontSize: "18px",
+  lineHeight: "16.2px",
+
+  fontWeight: 700,
   padding: "8px 16px",
   textDecoration: "none",
   "&:hover": {
@@ -91,7 +95,7 @@ export function Header({}: {}) {
             target="_blank"
             rel="noopener noreferrer"
           >
-            ABOUT $CULT
+            $CULT
           </ExternalLink>
           <ExternalLink
             href="https://www.architectsnft.io/faq"

@@ -3,7 +3,7 @@ import { Button as UIButton, IconName } from "@interchain-ui/react";
 
 import { useChain } from "@cosmos-kit/react";
 // import { useQueryCW20Balance } from "@/hooks/useQuerySmartContract";
-import { ArchButton } from "../common/ArchButton";
+import { ArchButton } from "../ArchButton";
 import { CHAIN_NAME } from "../../config";
 
 export type ButtonProps = {

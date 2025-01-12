@@ -10,7 +10,7 @@ import {
   TextField,
   Typography,
 } from "@mui/material";
-import { ArchButton } from "../common/ArchButton";
+import { ArchButton } from "../ArchButton";
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { Add as AddIcon, Remove as RemoveIcon } from "@mui/icons-material";
@@ -36,7 +36,7 @@ const ProgressBar = styled(LinearProgress)(({ theme }) => ({
 const StatusBadge = styled(Box)(({ theme }) => ({
   display: "inline-flex",
   alignItems: "center",
-  gap: 8,
+  gap: 4,
   padding: "4px 12px",
   borderRadius: 16,
   backgroundColor: "#262c35",
@@ -44,6 +44,9 @@ const StatusBadge = styled(Box)(({ theme }) => ({
   "& .dot": {
     width: 8,
     height: 8,
+    position: "relative",
+    top: 2,
+
     borderRadius: "50%",
     backgroundColor: "#4aed4a",
   },
@@ -56,6 +59,7 @@ export const Mint = () => {
   const totalMinted = 4444;
   const totalSupply = 6000;
   const price = 150;
+  const mintLive = false;
 
   const handleDecrease = () => {
     setMintAmount((prev) => Math.max(1, prev - 1));
@@ -91,20 +95,38 @@ export const Mint = () => {
                   }}
                 />
 
-                <ProgressBar variant="determinate" value={progress} />
+                <Stack spacing={2}>
+                  <ProgressBar variant="determinate" value={progress} />
+                  <Typography variant="subtitle2" textAlign="center">
+                    {(100 * (totalMinted / totalSupply)).toFixed(2)}% Minted!
+                  </Typography>
+                </Stack>
                 <Box
                   sx={{
                     display: "flex",
                     justifyContent: "space-between",
                     mt: 1,
+                    alignItems: "center",
                   }}
                 >
                   <StatusBadge>
-                    <span>Public</span>
-                    <span className="dot" />
-                    <span>Live</span>
+                    <span style={{ marginRight: 2 }}>
+                      <Typography variant="caption">Public</Typography>
+                    </span>
+                    <span
+                      className="dot"
+                      style={{ backgroundColor: mintLive ? "#4aed4a" : "gray" }}
+                    />
+                    <span>
+                      <Typography
+                        color={mintLive ? "#4AED4A" : "gray"}
+                        variant="caption"
+                      >
+                        {mintLive ? "Live" : "Coming Soon"}
+                      </Typography>
+                    </span>
                   </StatusBadge>
-                  <Typography color="#ffffff">
+                  <Typography color="#ffffff" variant="caption">
                     {totalMinted} / {totalSupply} Minted
                   </Typography>
                 </Box>
@@ -112,7 +134,7 @@ export const Mint = () => {
             </Grid2>
 
             {/* Right side - Mint Controls */}
-            <Grid2 size={6} sx={{ px: 6, py: 6 }}>
+            <Grid2 size={6} sx={{ px: 6, pt: 6, pb: 2 }}>
               <Box sx={{ flex: 1 }}>
                 <Box sx={{ display: "flex", justifyContent: "center" }}>
                   <img
@@ -230,8 +252,10 @@ export const Mint = () => {
                           alignSelf: "center",
                         }}
                       >
-                        Get $CULT on Osmosis
-                        <span style={{ fontSize: 20 }}>↗</span>
+                        <Typography variant="subtitle2">
+                          Get $CULT on Osmosis{" "}
+                          <span style={{ fontSize: 14 }}>↗</span>
+                        </Typography>
                       </a>
                     </Stack>
                   </Grid2>

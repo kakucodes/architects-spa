@@ -18,6 +18,7 @@ import { ThemeProvider as MuiThemeProvider, createTheme } from "@mui/material";
 // Import the generated route tree
 import { routeTree } from "./routeTree.gen";
 import { wallets } from "@cosmos-kit/keplr";
+import { TypographyOptions } from "@mui/material/styles/createTypography";
 
 // const keplrExtension = new KeplrExtensionWallet();
 // const KeplrMobile = new KeplrMobileWallet();
@@ -49,6 +50,84 @@ declare module "@tanstack/react-router" {
   }
 }
 
+export const typography: TypographyOptions = {
+  // fontFamily: '"Inter", "Roboto", "Helvetica", "Arial", sans-serif',
+  h1: {
+    fontFamily: '"acumin-pro", sans-serif',
+    fontSize: "2.5rem",
+    fontWeight: 700,
+    letterSpacing: "0.02em",
+    color: "#FFB800", // The gold/orange brand color
+    textTransform: "uppercase",
+  },
+  h2: {
+    fontFamily: '"acumin-pro", sans-serif',
+    fontSize: "32px",
+    lineHeight: "32px",
+    fontWeight: 400,
+  },
+  h3: {
+    fontFamily: '"acumin-pro", sans-serif',
+    fontSize: "1.5rem",
+    fontWeight: 600,
+    letterSpacing: "0.01em",
+  },
+  h4: {
+    fontFamily: '"acumin-pro", sans-serif',
+    fontSize: "18px",
+    lineHeight: "16.2px",
+    color: "#FFF",
+    fontWeight: 700,
+  },
+  subtitle1: {
+    fontFamily: '"acumin-pro", sans-serif',
+    fontSize: "14px",
+    lineHeight: "11.2px",
+    fontWeight: 500,
+    color: "#F4B305",
+  },
+  subtitle2: {
+    fontFamily: '"acumin-pro", sans-serif',
+    fontSize: "14px",
+    lineHeight: "11.2px",
+    color: "#F4B305",
+    fontWeight: 500,
+  },
+  body1: {
+    fontFamily: '"acumin-pro", sans-serif',
+    fontSize: "14px",
+    lineHeight: "14px",
+    color: "#FFF",
+    fontWeight: 400,
+  },
+  body2: {
+    fontFamily: '"acumin-pro", sans-serif',
+    fontSize: "0.875rem",
+    fontWeight: 400,
+  },
+  button: {
+    fontFamily: '"acumin-pro", sans-serif',
+    fontSize: "18px",
+    lineHeight: "18px",
+    fontWeight: 900,
+    // letterSpacing: "0.05em",
+    textTransform: "uppercase",
+  },
+  caption: {
+    fontFamily: '"acumin-pro", sans-serif',
+    fontSize: "14px",
+    lineHeight: "14px",
+    fontWeight: 400,
+  },
+  overline: {
+    fontFamily: '"acumin-pro", sans-serif',
+    fontSize: "0.75rem",
+    fontWeight: 500,
+    letterSpacing: "0.08em",
+    textTransform: "uppercase",
+  },
+};
+
 root.render(
   <React.StrictMode>
     <QueryClientProvider client={new QueryClient()}>
@@ -67,74 +146,7 @@ root.render(
                 },
               },
             },
-            typography: {
-              h1: {
-                fontFamily: "acumin-pro, sans-serif",
-                textTransform: "uppercase",
-                fontWeight: "bold",
-                fontSize: "42px",
-              },
-              h2: {
-                fontFamily: "acumin-pro, sans-serif",
-                textTransform: "uppercase",
-                fontWeight: "bold",
-              },
-              h3: {
-                fontFamily: "roc-grotesk, sans-serif",
-                textTransform: "uppercase",
-                fontWeight: 700,
-                fontSize: "32px",
-              },
-              h4: {
-                fontFamily: "acumin-pro, sans-serif",
-                textTransform: "uppercase",
-              },
-              h5: {
-                fontFamily: "roc-grotesk-condensed, sans-serif",
-                textTransform: "uppercase",
-                fontWeight: 400,
-                fontSize: "18px",
-              },
-              h6: {
-                fontFamily: "acumin-pro, sans-serif",
-                textTransform: "uppercase",
-                fontSize: "14px",
-                fontWeight: 500,
-                color: "#777777",
-              },
-              subtitle1: {
-                fontFamily: "roc-grotesk-condensed, sans-serif",
-                textTransform: "uppercase",
-                color: "#F4B305",
-                fontSize: "32px",
-                fontWeight: "bold",
-              },
-              subtitle2: {
-                fontFamily: "roc-grotesk-wide, sans-serif",
-                textTransform: "uppercase",
-                color: "#F4B305",
-                fontSize: "18px",
-                fontWeight: 300,
-              },
-              button: {
-                fontFamily: "acumin-pro, sans-serif",
-                textTransform: "uppercase",
-              },
-              body1: {
-                fontFamily: "acumin-pro, sans-serif",
-                textTransform: "uppercase",
-              },
-              body2: {
-                fontFamily: "acumin-pro, sans-serif",
-              },
-              caption: {
-                fontFamily: "acumin-pro, sans-serif",
-                textTransform: "uppercase",
-                fontWeight: "500",
-                fontSize: "14px",
-                color: "#F4B305",
-              },
-            },
+            typography,
           })}
         >
           <ChainProvider

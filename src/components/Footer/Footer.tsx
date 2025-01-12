@@ -11,7 +11,9 @@ const FooterContainer = styled(Box)({
 const InternalLink = styled(RouterLink)({
   color: "#ffffff",
   textDecoration: "none",
-  fontSize: "16px",
+  fontSize: "14px",
+  lineHeight: "11.2px",
+  fontWeight: 500,
   "&:hover": {
     color: "#777777",
   },
@@ -20,7 +22,9 @@ const InternalLink = styled(RouterLink)({
 const FooterLink = styled(Link)({
   color: "#ffffff",
   textDecoration: "none",
-  fontSize: "16px",
+  fontSize: "14px",
+  lineHeight: "11.2px",
+  fontWeight: 500,
   "&:hover": {
     color: "#777777",
   },

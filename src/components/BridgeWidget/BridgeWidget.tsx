@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Box, Button, Card, Stack, Typography, styled } from "@mui/material";
 import { NetworkSelector } from "./NetworkSelector";
 import { TokenInput } from "./TokenInput";
-import { ArchButton } from "../common/ArchButton";
+import { ArchButton } from "../ArchButton";
 
 const BridgeCard = styled(Card)({
   background: "#16191f",
@@ -66,7 +66,7 @@ export const BridgeWidget = () => {
   return (
     <BridgeCard>
       <Stack spacing={6}>
-        <Typography variant="h3" color="white" sx={{ mb: 4 }}>
+        <Typography variant="h2" color="white" sx={{ mb: 4 }}>
           Bridge
         </Typography>
 
@@ -79,7 +79,7 @@ export const BridgeWidget = () => {
             }}
           >
             <Stack spacing={2}>
-              <Typography variant="h6" color="white" sx={{ mb: 2 }}>
+              <Typography variant="body1" color="white" sx={{ mb: 2 }}>
                 From
               </Typography>
               <NetworkSelector
@@ -93,7 +93,7 @@ export const BridgeWidget = () => {
             </Box>
 
             <Stack spacing={2}>
-              <Typography variant="h6" color="white" sx={{ mb: 2 }}>
+              <Typography variant="body1" color="white" sx={{ mb: 2 }}>
                 To
               </Typography>
               <NetworkSelector

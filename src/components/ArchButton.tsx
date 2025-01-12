@@ -72,7 +72,7 @@ export const ArchButton = ({
     </RedFilledButton>
   ) : (
     <OutlinedButton onClick={onClick} disabled={disabled} variant="outlined">
-      <Box sx={{ direction: "row", display: "flex" }}>
+      <Box sx={{ direction: "row", display: "flex", alignItems: "center" }}>
         <img
           src={`${process.env.PUBLIC_URL}/cultIcon.png`}
           height="24"

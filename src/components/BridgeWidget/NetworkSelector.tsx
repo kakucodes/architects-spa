@@ -24,8 +24,9 @@ const NetworkLogo = styled(Box)({
 
 const NetworkName = styled(Typography)({
   color: "#ffffff",
-  fontSize: "20px",
-  fontWeight: 500,
+  fontSize: "16px",
+
+  fontWeight: 900,
 });
 
 export const NetworkSelector: React.FC<NetworkSelectorProps> = ({
