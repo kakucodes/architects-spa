@@ -18,7 +18,8 @@ const SwapButton = styled(Button)({
   minWidth: "unset",
   padding: 0,
   borderRadius: "50%",
-  backgroundColor: "#262c35",
+  backgroundColor: "black",
+  border: "3px solid #262c35",
   color: "#ffffff",
   "&:hover": {
     backgroundColor: "#363c45",

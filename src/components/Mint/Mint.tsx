@@ -115,9 +115,16 @@ export const Mint = () => {
                   }}
                 >
                   <StatusBadge>
-                    <span style={{ marginRight: 2 }}>
-                      <Typography variant="caption">Public</Typography>
-                    </span>
+                    <Box sx={{ mr: { md: "2px", sm: 0, xs: 0 } }}>
+                      <Typography
+                        sx={{
+                          display: { md: "inline", sm: "none", xs: "none" },
+                        }}
+                        variant="caption"
+                      >
+                        Public
+                      </Typography>
+                    </Box>
                     <span
                       className="dot"
                       style={{ backgroundColor: mintLive ? "#4aed4a" : "gray" }}

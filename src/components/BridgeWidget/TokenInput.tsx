@@ -73,7 +73,11 @@ export const TokenInput: React.FC<TokenInputProps> = ({
               width={32}
               height={32}
             />
-            <Typography variant="h6" color="white">
+            <Typography
+              sx={{ display: { md: "inline", sm: "none", xs: "none" } }}
+              variant="h6"
+              color="white"
+            >
               CULT
             </Typography>
           </TokenInfo>
