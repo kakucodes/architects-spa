@@ -15,6 +15,9 @@ import { Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { Add as AddIcon, Remove as RemoveIcon } from "@mui/icons-material";
 import { MaxableInput } from "../MaxableInput/MaxableInput";
+import { CHAIN_NAME } from "../../config";
+import { useChain } from "@cosmos-kit/react";
+import { ButtonDisconnected } from "../wallet/Connect";
 
 const StyledCard = styled(Card)(({ theme }) => ({
   background: "#16191F80",
@@ -53,6 +56,7 @@ const StatusBadge = styled(Box)(({ theme }) => ({
 }));
 
 export const Mint = () => {
+  const { isWalletConnected, connect } = useChain(CHAIN_NAME);
   const [mintAmount, setMintAmount] = useState(1);
   const maxMint = 20;
   const progress = 74.06;
@@ -263,11 +267,11 @@ export const Mint = () => {
 
                   <Grid2 size={12}>
                     <Stack spacing={2}>
-                      <ArchButton
+                      {isWalletConnected ? <ArchButton
                         text="MINT ARCHITECT"
                         disabled
                         onClick={console.log}
-                      />
+                      /> : <ButtonDisconnected onClick={connect} />}
 
                       <a
                         href="#"

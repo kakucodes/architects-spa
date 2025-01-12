@@ -3,6 +3,9 @@ import { Box, Button, Card, Stack, Typography, styled } from "@mui/material";
 import { NetworkSelector } from "./NetworkSelector";
 import { TokenInput } from "./TokenInput";
 import { ArchButton } from "../ArchButton";
+import { useChain } from "@cosmos-kit/react";
+import { CHAIN_NAME } from "../../config";
+import { ButtonDisconnected } from "../wallet/Connect";
 
 const BridgeCard = styled(Card)({
   background: "#16191f",
@@ -47,6 +50,7 @@ const BalanceText = styled(Typography)({
 });
 
 export const BridgeWidget = () => {
+  const { isWalletConnected, connect } = useChain(CHAIN_NAME);
   const [amount, setAmount] = useState("150");
   const [fromNetwork, setFromNetwork] = useState({
     name: "OSMOSIS",
@@ -147,7 +151,11 @@ export const BridgeWidget = () => {
               </Stack>
             </Stack>
 
-            <ArchButton text="BRIDGE" disabled onClick={console.log} />
+            {isWalletConnected ? (
+              <ArchButton text="BRIDGE" disabled onClick={console.log} />
+            ) : (
+              <ButtonDisconnected onClick={connect} />
+            )}
           </Stack>
         </Stack>
       </BridgeCard>
