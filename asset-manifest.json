@@ -1,28 +1,28 @@
 {
   "files": {
-    "main.css": "/architects-spa/static/css/main.b9f229be.css",
-    "main.js": "/architects-spa/static/js/main.9a6daf74.js",
+    "main.css": "/architects-spa/static/css/main.1c16bb73.css",
+    "main.js": "/architects-spa/static/js/main.676f47c4.js",
     "static/js/358.89765f96.chunk.js": "/architects-spa/static/js/358.89765f96.chunk.js",
     "static/js/546.e3615311.chunk.js": "/architects-spa/static/js/546.e3615311.chunk.js",
     "static/js/117.5bec11b1.chunk.js": "/architects-spa/static/js/117.5bec11b1.chunk.js",
-    "static/js/494.9f817e84.chunk.js": "/architects-spa/static/js/494.9f817e84.chunk.js",
-    "static/js/908.97af1fa3.chunk.js": "/architects-spa/static/js/908.97af1fa3.chunk.js",
-    "static/js/154.aed40eeb.chunk.js": "/architects-spa/static/js/154.aed40eeb.chunk.js",
-    "static/js/892.dde7ca79.chunk.js": "/architects-spa/static/js/892.dde7ca79.chunk.js",
+    "static/js/724.acda2dee.chunk.js": "/architects-spa/static/js/724.acda2dee.chunk.js",
+    "static/js/908.4569d027.chunk.js": "/architects-spa/static/js/908.4569d027.chunk.js",
+    "static/js/154.c5b40d04.chunk.js": "/architects-spa/static/js/154.c5b40d04.chunk.js",
+    "static/js/20.4029d84f.chunk.js": "/architects-spa/static/js/20.4029d84f.chunk.js",
     "static/media/axios.cjs": "/architects-spa/static/media/axios.f50781e842ef05922fb7.cjs",
     "index.html": "/architects-spa/index.html",
-    "main.b9f229be.css.map": "/architects-spa/static/css/main.b9f229be.css.map",
-    "main.9a6daf74.js.map": "/architects-spa/static/js/main.9a6daf74.js.map",
+    "main.1c16bb73.css.map": "/architects-spa/static/css/main.1c16bb73.css.map",
+    "main.676f47c4.js.map": "/architects-spa/static/js/main.676f47c4.js.map",
     "358.89765f96.chunk.js.map": "/architects-spa/static/js/358.89765f96.chunk.js.map",
     "546.e3615311.chunk.js.map": "/architects-spa/static/js/546.e3615311.chunk.js.map",
     "117.5bec11b1.chunk.js.map": "/architects-spa/static/js/117.5bec11b1.chunk.js.map",
-    "494.9f817e84.chunk.js.map": "/architects-spa/static/js/494.9f817e84.chunk.js.map",
-    "908.97af1fa3.chunk.js.map": "/architects-spa/static/js/908.97af1fa3.chunk.js.map",
-    "154.aed40eeb.chunk.js.map": "/architects-spa/static/js/154.aed40eeb.chunk.js.map",
-    "892.dde7ca79.chunk.js.map": "/architects-spa/static/js/892.dde7ca79.chunk.js.map"
+    "724.acda2dee.chunk.js.map": "/architects-spa/static/js/724.acda2dee.chunk.js.map",
+    "908.4569d027.chunk.js.map": "/architects-spa/static/js/908.4569d027.chunk.js.map",
+    "154.c5b40d04.chunk.js.map": "/architects-spa/static/js/154.c5b40d04.chunk.js.map",
+    "20.4029d84f.chunk.js.map": "/architects-spa/static/js/20.4029d84f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b9f229be.css",
-    "static/js/main.9a6daf74.js"
+    "static/css/main.1c16bb73.css",
+    "static/js/main.676f47c4.js"
   ]
 }
