@@ -136,6 +136,24 @@ root.render(
           theme={createTheme({
             colorSchemes: {},
             components: {
+              MuiDrawer: {
+                styleOverrides: {
+                  paper: {
+                    backgroundColor: "#16191FDD",
+                    color: "#FFFFFF",
+                  },
+                },
+              },
+              MuiListItem: {
+                styleOverrides: {
+                  root: {
+                    "&:hover": {
+                      backgroundColor: "rgba(255, 255, 255, 0.1)",
+                    },
+                  },
+                },
+              },
+
               MuiTextField: {
                 styleOverrides: {
                   root: {
