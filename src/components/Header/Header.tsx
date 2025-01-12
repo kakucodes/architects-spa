@@ -25,6 +25,7 @@ import {
   IconButton,
   Drawer,
   Stack,
+  Container,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import { CHAIN_NAME } from "../../config";
@@ -159,7 +160,16 @@ export function Header({}: {}) {
       position="static"
       sx={{ backgroundColor: "#000", boxShadow: "none", py: "12px" }}
     >
-      <Toolbar sx={{ justifyContent: "space-between", px: "24px" }}>
+      <Container
+        maxWidth="lg"
+        sx={{
+          px: { xs: 3, sm: 4, md: 6, lg: 8 },
+          justifyContent: "space-between",
+          display: "flex",
+          flexDirection: "row",
+          // px: "24px",
+        }}
+      >
         <Box sx={{ display: "flex", alignItems: "center" }}>
           <Link to="/">
             <img
@@ -193,7 +203,7 @@ export function Header({}: {}) {
             </>
           )}
         </Box>
-      </Toolbar>
+      </Container>
       <Drawer
         variant="temporary"
         anchor="right"
