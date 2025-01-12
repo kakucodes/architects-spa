@@ -12,7 +12,7 @@ const InputContainer = styled(Box)({
   display: "flex",
   alignItems: "center",
   backgroundColor: "#000000",
-  borderRadius: "9999px", // Changed to full rounded
+  borderRadius: "9999px",
   overflow: "hidden",
   width: "fit-content",
   border: "1px solid #262C35",
@@ -20,7 +20,7 @@ const InputContainer = styled(Box)({
 
 const StyledInput = styled(InputBase)({
   color: "#ffffff",
-  padding: "8px 12px",
+  padding: "0px 12px",
   width: "60px",
   input: {
     textAlign: "center",

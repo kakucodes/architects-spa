@@ -177,7 +177,7 @@ export const Mint = () => {
                   rowSpacing={{ md: 3, sm: 4, xs: 4 }}
                 >
                   <Grid2 size={6}>
-                    <Stack spacing={1}>
+                    <Stack spacing={2}>
                       <Typography color="white">Streamswap</Typography>
                       <Box
                         sx={{
@@ -201,7 +201,7 @@ export const Mint = () => {
                   </Grid2>
 
                   <Grid2 size={6}>
-                    <Stack spacing={1}>
+                    <Stack spacing={2}>
                       <Typography color="white">Minting on</Typography>
                       <Box
                         sx={{
@@ -225,7 +225,7 @@ export const Mint = () => {
                   </Grid2>
 
                   <Grid2 size={6}>
-                    <Stack spacing={1}>
+                    <Stack spacing={2}>
                       <Typography color="white">Sale Price</Typography>
                       <Box
                         sx={{
@@ -249,7 +249,7 @@ export const Mint = () => {
                   </Grid2>
 
                   <Grid2 size={6}>
-                    <Stack spacing={1}>
+                    <Stack spacing={2}>
                       <Typography color="white">
                         # to Mint (0/{maxMint})
                       </Typography>
